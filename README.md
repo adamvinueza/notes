@@ -33,3 +33,22 @@ brew go get golint
 Brew puts Go tools into `/usr/local/Cellar/go/$GOVERSION$/bin`, so you can just
 run `go get -u golang.org/x/lint/golint`, move the file from `$HOME/go/bin` to
 the above directory, and create a symbolic link.
+
+# Creating a Github repository from the command line
+First, create a git repository in the usual way:
+```
+mkdir my-new-repo
+cd my-new-repo
+git init
+echo '#My New Repository\nLorem ipsum.' > README.md
+git add README.md
+git commit -m 'Initial commit'
+git remote add origin git@github.com:USERNAME/my-new-repo.git
+```
+Then you'll need to create the repository on Github. To do this, you'll need to
+create a [Github personal access token](https://github.com/settings/tokens).
+It's simplest to copy it into the shell variable `GITHUB_ACCESS_TOKEN`. Then you
+run this Github API command:
+```
+curl -u USERNAME:$GITHUB_ACCESS_TOKEN https://api.github.com/user/repos -d '{"name":"my-new-repo"}'
+```
