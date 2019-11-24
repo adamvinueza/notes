@@ -7,7 +7,17 @@ Create a symbolic link:
 ```
 ln -s <srcfile> <dest>
 ```
-
+Command substitution (run a command in a subshell and return the value within a
+command):
+```
+$(UNIX_COMMAND)
+`UNIX_COMMAND`
+```
+For example, here is a way to show all the machine-local users:
+```
+ls $(dirname ~) 
+ls `dirname ~`
+```
 # Installing Go with Homebrew
 The latest version is 1.13.
 
@@ -43,12 +53,12 @@ git init
 echo '#My New Repository\nLorem ipsum.' > README.md
 git add README.md
 git commit -m 'Initial commit'
-git remote add origin git@github.com:USERNAME/my-new-repo.git
+git remote add origin git@github.com:$(git config user.name)/my-new-repo.git
 ```
 Then you'll need to create the repository on Github. To do this, you'll need to
 create a [Github personal access token](https://github.com/settings/tokens).
 It's simplest to copy it into the shell variable `GITHUB_ACCESS_TOKEN`. Then you
 run this Github API command:
 ```
-curl -u USERNAME:$GITHUB_ACCESS_TOKEN https://api.github.com/user/repos -d '{"name":"my-new-repo"}'
+curl -u $(git config user.name):$GITHUB_ACCESS_TOKEN https://api.github.com/user/repos -d '{"name":"my-new-repo"}'
 ```
