@@ -66,3 +66,36 @@ Finally, push the repository changes to your new remote repository:
 ```
 git push -u origin master
 ```
+
+# Debugging Go in Visual Studio Code
+
+You'll need the standard `launch.json` configuration:
+```
+{
+	"version": "0.2.0",
+	"configurations": [
+
+		{
+			"name": "Launch",
+			"type": "go",
+			"request": "launch",
+			"mode": "auto",
+			"program": "${fileDirname}",
+			"env": {},
+			"args": []
+		}
+	]
+}
+```
+Install the command line Go debugger, `dlv`:
+```
+go get github.com/go-delve/delve/cmd/dlv
+```
+Make sure it's in your PATH.
+
+Once `dlv` is installed, you should be able to set breakpoints in your Go
+programs and debug them in Visual Studio Code. It's possible that you'll need to
+install the XCode command-line tools so that the debugger can be launched:
+```
+xcode-select --install
+```
