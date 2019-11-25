@@ -62,3 +62,7 @@ run this Github API command:
 ```
 curl -u $(git config user.name):$GITHUB_ACCESS_TOKEN https://api.github.com/user/repos -d '{"name":"my-new-repo"}'
 ```
+Finally, push the repository changes to your new remote repository:
+```
+git push -u origin master
+```
