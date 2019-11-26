@@ -99,3 +99,14 @@ install the XCode command-line tools so that the debugger can be launched:
 ```
 xcode-select --install
 ```
+
+# Testing in Go
+## Running Go tests in a specific subdirectory
+To run only tests in subdirectory `foo`:
+```
+go test ./foo
+```
+## Clearing test cache
+```
+go clean -testcache
+```
