@@ -99,6 +99,9 @@ install the XCode command-line tools so that the debugger can be launched:
 ```
 xcode-select --install
 ```
+### A note on tests that depend on an environment variable being set
+You can set the environment variable in your `launch.json` file, in the `env`
+property, which is an object that allows the variable to be a property name.
 
 # Testing in Go
 ## Running Go tests in a specific subdirectory
