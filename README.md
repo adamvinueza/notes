@@ -113,3 +113,16 @@ go test ./foo
 ```
 go clean -testcache
 ```
+## Instructional resources
+
+### Go Best Practices
+https://www.brianketelsen.com/talks/gcru18-best/
+
+### Concurrency is not Parallelism
+https://www.youtube.com/watch?v=cN_DpYBzKso
+
+### Go Proverbs
+https://www.youtube.com/watch?v=PAAkCSZUG1c
+
+### Closures are the Generics of GO
+https://www.youtube.com/watch?v=5IKcPMJXkKs
