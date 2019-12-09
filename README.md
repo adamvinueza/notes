@@ -113,7 +113,7 @@ go test ./foo
 ```
 go clean -testcache
 ```
-# Instructional resources
+# Go Instructional Resources
 
 ## Go Best Practices
 https://www.brianketelsen.com/talks/gcru18-best/
