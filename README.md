@@ -126,3 +126,18 @@ https://www.youtube.com/watch?v=PAAkCSZUG1c
 
 ## Closures are the Generics of GO
 https://www.youtube.com/watch?v=5IKcPMJXkKs
+
+# Docker Instructional Resources
+
+[Images and Layers](https://docs.docker.com/storage/storagedriver/)
+
+[Anatomy of a Container](https://www.slideshare.net/mobile/jpetazzo/anatomy-of-a-container-namespaces-cgroups-some-filesystem-magic-linuxcon)
+
+[AWS Lambda Simulation Docker Images](https://github.com/lambci/docker-lambda#run-examples)
+
+[Digging into Docker Layers](https://medium.com/@jessgreb01/digging-into-docker-layers-c22f948ed612)
+
+[Hello World](https://howtodoinjava.com/library/docker-hello-world-example/)
+
+[AWS SAM in a Docker Container](https://medium.com/monsoon-engineering/running-aws-sam-in-a-docker-container-2491596672c2)
+
