@@ -127,6 +127,15 @@ https://www.youtube.com/watch?v=PAAkCSZUG1c
 ## Closures are the Generics of GO
 https://www.youtube.com/watch?v=5IKcPMJXkKs
 
+[The Why of Go](https://www.infoq.com/presentations/go-concurrency-gc/)
+
+[Go advanced concurrency patterns: part 3 (channels)](https://blogtitle.github.io/go-advanced-concurrency-patterns-part-3-channels/)
+
+[An Overview of Go's Tooling](https://www.alexedwards.net/blog/an-overview-of-go-tooling)
+
+[Practical Go](https://dave.cheney.net/practical-go/presentations/qcon-china.html)
+
+
 # Docker Instructional Resources
 
 [Images and Layers](https://docs.docker.com/storage/storagedriver/)
