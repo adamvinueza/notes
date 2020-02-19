@@ -16,12 +16,18 @@ TDD](https://www.jamesshore.com/Agile-Book/test_driven_development.html)
 testing](https://www.youtube.com/watch?v=gmasnR_Cml0)
 - [Jessica Kerr's post echoing Cooper's points](https://blog.jessitron.com/2014/09/04/tdd-is-dead-long-live-tdd/)
 
-## My experiences with TDD
+## My experiences with (and initial reactions to) TDD
 
 Since starting to work at Applied, I've done a few small independent projects 
 (e.g., implementation of a finite-state machine, partial implementation of an
 interpreter) and done some refactoring in the data analytics service using TDD
 principles. There's a lot to like about TDD, but my experiences are a mixed bag.
+
+The topics below give a sense of how I feel about TDD--what's good and bad about
+it, where it's valuable, how it's best approach. This is just one person's view,
+of course, and I expect different engineers will think differently about it. But
+I hope it'll provide readers with some useful things to consider when starting
+to work with TDD.
 
 ### TDD evangelism is a bit much
 
@@ -118,5 +124,5 @@ to build strong confidence that it works, because they can read the tests!
 
 A team of engineers building an application while writing code the engineers
 have confidence in will build an application they're confident works. An
-organization with teams of engineers building application they're confident in
+organization with teams of engineers building applications they're confident in
 will trust the engineers to build applications, and to take greater risks.
