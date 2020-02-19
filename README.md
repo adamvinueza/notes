@@ -1,3 +1,7 @@
+# TDD notes
+
+[Some notes I prepared for a collaborative tech talk on TDD](/tdd)
+
 # Shell commands (bash, zsh) 
 Get the value of a symbolic link:
 ```
