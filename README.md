@@ -119,17 +119,13 @@ go clean -testcache
 ```
 # Go Instructional Resources
 
-## Go Best Practices
-https://www.brianketelsen.com/talks/gcru18-best/
+[Go Best Practices](https://www.brianketelsen.com/talks/gcru18-best/)
 
-## Concurrency is not Parallelism
-https://www.youtube.com/watch?v=cN_DpYBzKso
+[Concurrency is not Parallelism](https://www.youtube.com/watch?v=cN_DpYBzKso)
 
-## Go Proverbs
-https://www.youtube.com/watch?v=PAAkCSZUG1c
+[Go Proverbs](https://www.youtube.com/watch?v=PAAkCSZUG1c)
 
-## Closures are the Generics of GO
-https://www.youtube.com/watch?v=5IKcPMJXkKs
+[Closures are the Generics of GO](https://www.youtube.com/watch?v=5IKcPMJXkKs)
 
 [The Why of Go](https://www.infoq.com/presentations/go-concurrency-gc/)
 
