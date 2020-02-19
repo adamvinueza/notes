@@ -24,7 +24,7 @@ interpreter) and done some refactoring in the data analytics service using TDD
 principles. There's a lot to like about TDD, but my experiences are a mixed bag.
 
 The topics below give a sense of how I feel about TDD--what's good and bad about
-it, where it's valuable, how it's best approach. This is just one person's view,
+it, where it's valuable, how it's best approached. This is just one person's view,
 of course, and I expect different engineers will think differently about it. But
 I hope it'll provide readers with some useful things to consider when starting
 to work with TDD.
