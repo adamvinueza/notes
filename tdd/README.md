@@ -7,14 +7,14 @@ are thinking about it?
 
 ## TDD resources
 
-[Robert C. Martin's famous TDD evangelism
+- [Robert C. Martin's famous TDD evangelism
 post](http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd)
-[James Shore's chapter on
+- [James Shore's chapter on
 TDD](https://www.jamesshore.com/Agile-Book/test_driven_development.html)
-[Ian Cooper's clarifying TDD presentation](https://dave.cheney.net/2018/10/15/internets-of-interest-7-ian-cooper-on-test-driven-development)
-[Michael Feather's talk on the nature of
+- [Ian Cooper's clarifying TDD presentation](https://dave.cheney.net/2018/10/15/internets-of-interest-7-ian-cooper-on-test-driven-development)
+- [Michael Feather's talk on the nature of
 testing](https://www.youtube.com/watch?v=gmasnR_Cml0)
-[Jessica Kerr's post echoing Cooper's points](https://blog.jessitron.com/2014/09/04/tdd-is-dead-long-live-tdd/)
+- [Jessica Kerr's post echoing Cooper's points](https://blog.jessitron.com/2014/09/04/tdd-is-dead-long-live-tdd/)
 
 ## My experiences with TDD
 
