@@ -111,7 +111,7 @@ problems that arise are fixed through hastily written and half-thought-through
 patches that are again eyeballed and judged to be fine.  Eventually you have a
 code base that hardly anyone understands. This means that it takes forever to
 figure out how to debug it, or change it, or test it. This leads to a situation
-in which the engineers simply stop caring whether the code works properly--they
+in which the engineers stop caring whether the code works properly--they
 see their job as simply keeping the application alive, and the thought of making
 the code better is utterly dispiriting.
 
