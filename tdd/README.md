@@ -60,6 +60,17 @@ Write no production public API function without a failing test.
 ```
 This is one of the key points in Ian Cooper's and Jessica Kerr's remarks.
 
+### Test code should be super-easy to read and understand
+
+The last thing you want to do with someone else's tests is spend a bunch of time
+figuring out what it's testing or how it's testing it. (Btw, the first "someone
+else" will probably be you from three weeks ago.) So it's worth putting a _lot_
+of time into making your tests easy to read, and a _lot_ of time making the test
+code as simple and straightforward as you can possibly make it.
+
+I recommend simply not worrying about how much time you put into this part of
+writing tests. Think of it as part of the design phase of building your API.
+
 ### The (API-level) test should read a lot like a specification
 
 Engineers are notorious for not reading documentation. They tend to feel it's a
