@@ -130,3 +130,27 @@ https://www.youtube.com/watch?v=PAAkCSZUG1c
 
 ## Closures are the Generics of GO
 https://www.youtube.com/watch?v=5IKcPMJXkKs
+
+[The Why of Go](https://www.infoq.com/presentations/go-concurrency-gc/)
+
+[Go advanced concurrency patterns: part 3 (channels)](https://blogtitle.github.io/go-advanced-concurrency-patterns-part-3-channels/)
+
+[An Overview of Go's Tooling](https://www.alexedwards.net/blog/an-overview-of-go-tooling)
+
+[Practical Go](https://dave.cheney.net/practical-go/presentations/qcon-china.html)
+
+
+# Docker Instructional Resources
+
+[Images and Layers](https://docs.docker.com/storage/storagedriver/)
+
+[Anatomy of a Container](https://www.slideshare.net/mobile/jpetazzo/anatomy-of-a-container-namespaces-cgroups-some-filesystem-magic-linuxcon)
+
+[AWS Lambda Simulation Docker Images](https://github.com/lambci/docker-lambda#run-examples)
+
+[Digging into Docker Layers](https://medium.com/@jessgreb01/digging-into-docker-layers-c22f948ed612)
+
+[Hello World](https://howtodoinjava.com/library/docker-hello-world-example/)
+
+[AWS SAM in a Docker Container](https://medium.com/monsoon-engineering/running-aws-sam-in-a-docker-container-2491596672c2)
+
