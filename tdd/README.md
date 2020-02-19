@@ -85,7 +85,7 @@ prefer to learn how an application works by reading its code. And usually the
 first question the engineer asks about a function or class or API is: what is it
 supposed to do?
 
-The tests of a function, if it's written well, should set out clearly and simply
+The tests of a function, if they're written well, should set out clearly and simply
 what the function is supposed to do. So if you read the tests (and the tests
 _should be readable_), you will come to know how the function is supposed to
 behave. This knowledge makes it much easier for you to debug the function, to
