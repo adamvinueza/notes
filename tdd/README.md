@@ -15,6 +15,7 @@ TDD](https://www.jamesshore.com/Agile-Book/test_driven_development.html)
 - [Michael Feather's talk on the nature of
 testing](https://www.youtube.com/watch?v=gmasnR_Cml0)
 - [Jessica Kerr's post echoing Cooper's points](https://blog.jessitron.com/2014/09/04/tdd-is-dead-long-live-tdd/)
+- [Martin Fowler on TDD, BDD, mocks, and stubs](https://martinfowler.com/articles/mocksArentStubs.html)
 
 ## My experiences with (and initial reactions to) TDD
 
