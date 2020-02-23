@@ -28,14 +28,15 @@ for all the sentences for most interesting languages, because most interesting
 languages are infinite, and the set of sentences not accepted by an automaton
 are also typically infinite.
 
-I mention finite-state automata because I decided a few weeks ago to implement
-finite-state automata in Go, and to do so using TDD principles--that is, I
-decided I'd write the tests _before_ writing the critical code. Initially, I
-wrote vanilla example-based tests: make an automaton that accepts only an even
-number of "a"'s, for example, then create tests that say it should accept "aa"
-and "aaaaaa", but not "aaa" or "aaaaaaaaaaa". How many tests do I need to be
-confident that my automaton works as it should? Who knows? Just think up a bunch
-of edge cases and then throw in a few robust examples for good measure.
+I mention finite-state automata because I decided a few weeks ago [to implement
+finite-state automata in Go](https://github.com/adamvinueza/fsa), and to do so
+using TDD principles--that is, I decided I'd write the tests _before_ writing
+the critical code. Initially, I wrote vanilla example-based tests: make an
+automaton that accepts only an even number of "a"'s, for example, then create
+tests that say it should accept "aa" and "aaaaaa", but not "aaa" or
+"aaaaaaaaaaa". How many tests do I need to be confident that my automaton works
+as it should? Who knows? Just think up a bunch of edge cases and then throw in a
+few robust examples for good measure.
 
 After reading Jessica Kerr, however, I realized what I really wanted was to do
 generate a bunch of random sentences, knowing ahead of time how to divide them
