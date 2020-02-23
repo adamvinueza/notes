@@ -28,8 +28,8 @@ the sentences of most interesting languages, because most interesting languages
 are infinite, and the set of sentences not accepted by an automaton are also
 typically infinite. But it's still a good idea to have a lot of (random)
 sentences in your language for testing, because then the automaton is working
-with real instead data instead of the toy examples programmers usually think up
-when hand-writing tests.
+with real data instead of the toy examples programmers usually think up when
+hand-writing tests.
 
 I mention finite-state automata because I decided a few weeks ago [to implement
 finite-state automata in Go](https://github.com/adamvinueza/fsa), and to do so
