@@ -135,6 +135,11 @@ go clean -testcache
 
 [Practical Go](https://dave.cheney.net/practical-go/presentations/qcon-china.html)
 
+## Go Testing
+
+[Gopter, the standard Go property-testing framework](https://github.com/leanovate/gopter)
+[Property-based testing in Go](https://giedrius.blog/2019/07/08/property-based-testing-in-golang/)
+[My own notes on property testing](/gopter-notes)
 
 # Docker Instructional Resources
 
