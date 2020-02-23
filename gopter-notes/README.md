@@ -23,10 +23,13 @@ As it happens, it also works really, really well when you want to test whether a
 finite-state automaton accepts a language. This is because you can specify the
 language using a property, and the property generates a whole bunch of arbitrary
 data you can use to build your confidence that the automaton accepts all and
-only sentences in the language. You can't exhaustively varify an automaton for
-all the sentences of most interesting languages, because most interesting
-languages are infinite, and the set of sentences not accepted by an automaton
-are also typically infinite.
+only sentences in the language. You can't exhaustively test an automaton for all
+the sentences of most interesting languages, because most interesting languages
+are infinite, and the set of sentences not accepted by an automaton are also
+typically infinite. But it's still a good idea to have a lot of (random)
+sentences in your language for testing, because then the automaton is working
+with real instead data instead of the toy examples programmers usually think up
+when hand-writing tests.
 
 I mention finite-state automata because I decided a few weeks ago [to implement
 finite-state automata in Go](https://github.com/adamvinueza/fsa), and to do so
