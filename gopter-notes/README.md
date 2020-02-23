@@ -23,8 +23,8 @@ As it happens, it also works really, really well when you want to verify that a
 finite-state automaton accepts a language. This is because you can specify the
 language using a property, and the property generates a whole bunch of arbitrary
 data you can use to build your confidence that the automaton accepts all and
-only sentences in the language. You can't do verify exhaustively an automaton
-for all the sentences for most interesting languages, because most interesting
+only sentences in the language. You can't exhaustively varify an automaton for
+all the sentences of most interesting languages, because most interesting
 languages are infinite, and the set of sentences not accepted by an automaton
 are also typically infinite.
 
