@@ -71,7 +71,25 @@ Finally, push the repository changes to your new remote repository:
 git push -u origin master
 ```
 
-# Debugging Go in Visual Studio Code
+# Visual Studio Code
+
+## Vim Support
+
+Use [Vim for Visual Studio Code](https://github.com/VSCodeVim).
+
+### Support for .vimrc files
+
+It's experimental: there is now a setting for it in the plugin.
+
+### Repeating commands by holding a key down
+
+OS X disables this generally. If you want to enable it for VSCode use this command:
+```
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+```
+You'll have to restart VSCode.
+
+## Debugging Go in Visual Studio Code
 
 You'll need the standard `launch.json` configuration:
 ```
