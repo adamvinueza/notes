@@ -1,4 +1,4 @@
-# I keep forgetting I am on a different branch so I made this script
+# I keep forgetting I am on a different branch, so ...
 
 Calling it `git-master-pull` and sticking it in `~/bin`:
 
