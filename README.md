@@ -1,3 +1,12 @@
+# I keep forgetting I am on a different branch so I made this script
+
+Calling it `git-master-pull` and sticking it in `~/bin`:
+
+```
+#!/bin/bash
+git checkout master && git pull
+```
+
 # TDD notes
 
 [Some notes I prepared for a collaborative tech talk on TDD](/tdd)
