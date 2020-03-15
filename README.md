@@ -5,6 +5,9 @@ searching my browser history for the same thing I searched for three weeks ago,
 etc., I (_finally_) decided to start putting those things onto this page. Think
 of it as my auxiliary long-term memory.
 
+(UPDATE: [This strongly suggests](https://imgur.com/a/n24kl) I should use the
+phrase 'duck it' for searching on DuckDuckGo.)
+
 ## I keep forgetting I am on a different branch, so ...
 
 Calling it `git-master-pull` and sticking it in `~/bin`:
