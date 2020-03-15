@@ -1,4 +1,11 @@
-# I keep forgetting I am on a different branch, so ...
+# Notes
+
+After finding myself duck-duck-going (ducking?) the same thing a bunch of times,
+searching my browser history for the same thing I searched for three weeks ago,
+etc., I (_finally_) decided to start putting those things onto this page. Think
+of it as my auxiliary long-term memory.
+
+##I keep forgetting I am on a different branch, so ...
 
 Calling it `git-master-pull` and sticking it in `~/bin`:
 
@@ -7,11 +14,11 @@ Calling it `git-master-pull` and sticking it in `~/bin`:
 git checkout master && git pull
 ```
 
-# TDD notes
+##TDD notes
 
 [Some notes I prepared for a collaborative tech talk on TDD](/tdd)
 
-# Shell commands (bash, zsh) 
+##Shell commands (bash, zsh) 
 Get the value of a symbolic link:
 ```
 readlink <filename>
@@ -31,8 +38,8 @@ For example, here is a way to show all the machine-local users:
 ls $(dirname ~) 
 ls `dirname ~`
 ```
-# Installing Go with Homebrew
-The latest version is 1.13.
+##Installing Go with Homebrew
+The latest version is 1.14.
 
 You can remove earlier versions of go by removing `usr/local/bin/go`. If it is
 symbolically linked, find it using `readlink` (see above).
@@ -57,7 +64,7 @@ Brew puts Go tools into `/usr/local/Cellar/go/$GOVERSION$/bin`, so you can just
 run `go get -u golang.org/x/lint/golint`, move the file from `$HOME/go/bin` to
 the above directory, and create a symbolic link.
 
-# Creating a Github repository from the command line
+##Creating a Github repository from the command line
 First, create a git repository in the usual way:
 ```
 mkdir my-new-repo
@@ -80,17 +87,17 @@ Finally, push the repository changes to your new remote repository:
 git push -u origin master
 ```
 
-# Visual Studio Code
+##Visual Studio Code
 
-## Vim Support
+###Vim Support
 
 Use [Vim for Visual Studio Code](https://github.com/VSCodeVim).
 
-### Support for .vimrc files
+####Support for .vimrc files
 
 It's experimental: there is now a setting for it in the plugin.
 
-### Repeating commands by holding a key down
+####Repeating commands by holding a key down
 
 OS X disables this generally. If you want to enable it for VSCode use this command:
 ```
@@ -98,7 +105,7 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 ```
 You'll have to restart VSCode.
 
-## Debugging Go in Visual Studio Code
+###Debugging Go in Visual Studio Code
 
 You'll need the standard `launch.json` configuration:
 ```
@@ -130,21 +137,21 @@ install the XCode command-line tools so that the debugger can be launched:
 ```
 xcode-select --install
 ```
-### A note on tests that depend on an environment variable being set
+####A note on tests that depend on an environment variable being set
 You can set the environment variable in your `launch.json` file, in the `env`
 property, which is an object that allows the variable to be a property name.
 
-# Testing in Go
-## Running Go tests in a specific subdirectory
+##Testing in Go
+###Running Go tests in a specific subdirectory
 To run only tests in subdirectory `foo`:
 ```
 go test ./foo
 ```
-## Clearing test cache
+###Clearing test cache
 ```
 go clean -testcache
 ```
-# Go Instructional Resources
+##Go Instructional Resources
 
 [Go Best Practices](https://www.brianketelsen.com/talks/gcru18-best/)
 
@@ -162,7 +169,7 @@ go clean -testcache
 
 [Practical Go](https://dave.cheney.net/practical-go/presentations/qcon-china.html)
 
-## Go Testing
+###Go Testing
 
 [Gopter, the standard Go property-testing framework](https://github.com/leanovate/gopter)
 
@@ -170,7 +177,7 @@ go clean -testcache
 
 [My own notes on property testing](/gopter-notes)
 
-# Docker Instructional Resources
+##Docker Instructional Resources
 
 [Images and Layers](https://docs.docker.com/storage/storagedriver/)
 
