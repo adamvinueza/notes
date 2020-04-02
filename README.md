@@ -89,6 +89,8 @@ Finally, push the repository changes to your new remote repository:
 ```
 git push -u origin master
 ```
+## Because I always forget reverting in Git
+[How to undo almost anything with Git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
 
 ## Visual Studio Code
 
