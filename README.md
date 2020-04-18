@@ -92,6 +92,10 @@ git push -u origin master
 ## Because I always forget reverting in Git
 [How to undo almost anything with Git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
 
+## Resolving 95% of Git conflicts
+
+[Quickest Way to Resolve Most Git Conflicts](https://easyengine.io/tutorials/git/git-resolve-merge-conflicts/)
+
 ## Visual Studio Code
 
 ### Vim Support
