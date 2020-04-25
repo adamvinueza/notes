@@ -41,6 +41,20 @@ For example, here is a way to show all the machine-local users:
 ls $(dirname ~) 
 ls `dirname ~`
 ```
+
+## Formatting JSON in Vim
+Install [jq](https://stedolan.github.io/jq/):
+
+```
+brew install jq
+```
+
+Inside vim:
+
+```
+:%!jq .
+```
+
 ## Installing Go with Homebrew
 The latest version is 1.14.
 
