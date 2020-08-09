@@ -217,14 +217,26 @@ go clean -testcache
 ## Python
 
 ### Creating a minimal Python package
-[Scott Torborg](https://www.scotttorborg.com/) has a nice tutorial on [creating a minimal Python package](https://python-packaging.readthedocs.io/en/latest/) that can be used for distributing your software.
+[Scott Torborg](https://www.scotttorborg.com/) has a nice tutorial on
+[creating a minimal Python
+package](https://python-packaging.readthedocs.io/en/latest/) that can be used
+for distributing your software.
+
+Essentially, you need to have a standard package structure, an `__init__.py`
+file inside the main source directory, and a `setup.py` script calling
+`setuptools.setup` that has an appropriate description of the package.
 
 ### Installing a Python package from Github via pip
-Once you have your Python package source stored in your repository, you can install it directly from Github in two steps. First, tag one of your commits with a version number (or, better, make a release). Second, put this into your `requirements.txt` file:
+Once you have your Python package source stored in your repository, you can
+install it directly from Github in two steps. First, tag one of your commits
+with a version number (or, better, make a release). Second, put this into
+your `requirements.txt` file:
 
 ```
 git+git://github.com/myaccount/myrepo.git@vM.m.p
 ```
-The above assumes your release has the name `vM.m.p` (ahem, shorthand for version Major.minor.patch).
+The above assumes your release has the name `vM.m.p` (ahem, shorthand for
+version Major.minor.patch).
 
-When you've done all that, running `pip install -r requirements.txt` will download the repository and run its `setup.py` script.
+When you've done all that, running `pip install -r requirements.txt` will
+download the repository and run its `setup.py` script.
