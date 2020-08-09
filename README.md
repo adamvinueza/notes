@@ -112,7 +112,7 @@ git push -u origin master
 
 ## Visual Studio Code
 
-### Vim Support
+### Vim support
 
 Use [Vim for Visual Studio Code](https://github.com/VSCodeVim).
 
@@ -174,7 +174,7 @@ go test ./foo
 ```
 go clean -testcache
 ```
-## Go Instructional Resources
+## Go instructional resources
 
 [Go Best Practices](https://www.brianketelsen.com/talks/gcru18-best/)
 
@@ -192,7 +192,7 @@ go clean -testcache
 
 [Practical Go](https://dave.cheney.net/practical-go/presentations/qcon-china.html)
 
-### Go Testing
+### Go testing
 
 [Gopter, the standard Go property-testing framework](https://github.com/leanovate/gopter)
 
@@ -200,7 +200,7 @@ go clean -testcache
 
 [My own notes on property testing](/gopter-notes)
 
-## Docker Instructional Resources
+## Docker instructional resources
 
 [Images and Layers](https://docs.docker.com/storage/storagedriver/)
 
@@ -214,3 +214,17 @@ go clean -testcache
 
 [AWS SAM in a Docker Container](https://medium.com/monsoon-engineering/running-aws-sam-in-a-docker-container-2491596672c2)
 
+## Python
+
+### Creating a minimal Python package
+[Scott Torborg](https://www.scotttorborg.com/) has a nice tutorial on [creating a minimal Python package](https://python-packaging.readthedocs.io/en/latest/) that can be used for distributing your software.
+
+### Installing a Python package from Github via pip
+Once you have your Python package source stored in your repository, you can install it directly from Github in two steps. First, tag one of your commits with a version number--or, better, make a release). Second, put this into your `requirements.txt` file:
+
+```
+git+git://github.com/myaccount/myrepo.git@vM.m.p
+```
+The above assumes your release has the name `vM.m.p` (ahem, shorthand for version Major.minor.patch).
+
+When you've done all that, running `pip install -r requirements.txt` will download the repository and run its `setup.py` script.
