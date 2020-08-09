@@ -220,7 +220,7 @@ go clean -testcache
 [Scott Torborg](https://www.scotttorborg.com/) has a nice tutorial on [creating a minimal Python package](https://python-packaging.readthedocs.io/en/latest/) that can be used for distributing your software.
 
 ### Installing a Python package from Github via pip
-Once you have your Python package source stored in your repository, you can install it directly from Github in two steps. First, tag one of your commits with a version number--or, better, make a release). Second, put this into your `requirements.txt` file:
+Once you have your Python package source stored in your repository, you can install it directly from Github in two steps. First, tag one of your commits with a version number (or, better, make a release). Second, put this into your `requirements.txt` file:
 
 ```
 git+git://github.com/myaccount/myrepo.git@vM.m.p
