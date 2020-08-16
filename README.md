@@ -17,6 +17,10 @@ Calling it `git-master-pull` and sticking it in `~/bin`:
 git checkout master && git pull
 ```
 
+## Excluding multiple directories with recursive grep
+
+grep -r --exclude-dir={dir1,dir2,...,dirn} EXPR DIR
+
 ## TDD notes
 
 [Some notes I prepared for a collaborative tech talk on TDD](/tdd)
