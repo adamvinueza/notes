@@ -19,7 +19,9 @@ git checkout master && git pull
 
 ## Excluding multiple directories with recursive grep
 
+```
 grep -r --exclude-dir={dir1,dir2,...,dirn} EXPR DIR
+```
 
 ## TDD notes
 
