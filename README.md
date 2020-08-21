@@ -78,6 +78,12 @@ More here: [Better zsh history](https://www.soberkoder.com/better-zsh-history/)
 grep -r --exclude-dir={dir1,dir2,...,dirn} EXPR DIR
 ```
 
+## Showing hidden files in Mac OS Finder dialog
+
+```
+Command-Shift-.
+```
+
 ## TDD notes
 
 [Some notes I prepared for a collaborative tech talk on TDD](/tdd)
