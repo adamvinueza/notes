@@ -32,6 +32,46 @@ git remote prune origin
 ```
 ht: [Why do I see a deleted remote branch?](https://stackoverflow.com/questions/17128466/why-do-i-see-a-deleted-remote-branch)
 
+
+## Using zsh
+
+It's the new default shell in Mac OS.
+
+#### Better zsh history
+
+```
+# In ~/.zshrc
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000000
+setopt INC_APPEND_HISTORY
+export HISTTIMEFORMAT="[%F %T] "
+setopt EXTENDED_HISTORY
+```
+
+Then you can see your history like this:
+
+```
+$ history -E -10
+  474  4.12.2019 00:08  unsetopt | grep extended
+  475  4.12.2019 00:08  history 5
+  476  4.12.2019 00:08  history -E
+  477  4.12.2019 00:09  man zsh
+  478  4.12.2019 00:09  man zshoptions | less -p EXTENDED_H
+  479  4.12.2019 00:10  cat ~/.zsh_history
+  480  4.12.2019 00:11  history -D
+  481  4.12.2019 00:11  history -E
+  482  4.12.2019 00:11  man history
+  483  4.12.2019 00:12  history -10
+```
+
+This is useful for cutting down on the noise of duplicate commands:
+```
+# In ~/.zshrc
+setopt HIST_FIND_NO_DUPS
+```
+
+More here: [Better zsh history](https://www.soberkoder.com/better-zsh-history/)
+
 ## Excluding multiple directories with recursive grep
 
 ```
