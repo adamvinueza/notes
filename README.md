@@ -17,6 +17,21 @@ Calling it `git-master-pull` and sticking it in `~/bin`:
 git checkout master && git pull
 ```
 
+## Pruning deleted remote branches from my local repository
+
+Find out what you can prune like this:
+
+```
+git remote prune --dry-run origin
+```
+
+Then prune like this:
+
+```
+git remote prune origin
+```
+ht: [Why do I see a deleted remote branch?](https://stackoverflow.com/questions/17128466/why-do-i-see-a-deleted-remote-branch)
+
 ## Excluding multiple directories with recursive grep
 
 ```
