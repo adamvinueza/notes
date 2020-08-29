@@ -25,9 +25,9 @@ phrase 'duck it' for searching on DuckDuckGo.)
 [TDD](#tdd)
 - [TDD talk notes](#tdd-talk)
 
-## Git <a name="git"></a>
+## Git <a name="git"/a>
 
-### Pruning deleted remote branches from my local copy <a name="git-remote-prune"></a>
+### Pruning deleted remote branches from my local copy <a name="git-remote-prune"/a>
 Find out what you can prune like this:
 
 ```
@@ -67,7 +67,7 @@ ls $(dirname ~)
 ls `dirname ~`
 ```
 [back](#contents)
-### Better zsh history <a name="zsh-history"></a>
+### Better zsh history <a name="zsh-history"/a>
 ```
 # In ~/.zshrc
 export HISTFILESIZE=1000000000
@@ -99,7 +99,7 @@ setopt HIST_FIND_NO_DUPS
 More here: [Better zsh history](https://www.soberkoder.com/better-zsh-history/)
 
 [back](#contents)
-## Excluding multiple directories with recursive grep <a name="grep-multi-exclude"></a>
+## Excluding multiple directories with recursive grep <a name="grep-multi-exclude"/a>
 
 ```
 grep -r --exclude-dir={dir1,dir2,...,dirn} EXPR DIR
@@ -107,7 +107,7 @@ grep -r --exclude-dir={dir1,dir2,...,dirn} EXPR DIR
 [back](#contents)
 
 ## Mac OS <a name="macos">
-## Showing hidden files in Mac OS Finder dialog <a name="hidden-finder"></a>
+## Showing hidden files in Mac OS Finder dialog <a name="hidden-finder"/a>
 ```
 Command-Shift-.
 ```
