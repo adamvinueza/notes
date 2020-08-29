@@ -12,13 +12,15 @@ phrase 'duck it' for searching on DuckDuckGo.)
 
 [Git](#git)
 - [Pruning deleted remote branches](#git-remote-prune)
-
-Shell
+[Shell](#shell)
+- [Symlinks](#symlinks)
+- [Command substitution](#cmd-sub)
 - [Better zsh history](#zsh-history)
 - [Excluding multiple directories with recursive grep](#grep-multi-exclude)
-
-Mac OS
+[Mac OS](#macos)
 - [Showing hidden files in Finder](#hidden-finder)
+[TDD](#tdd)
+- [TDD talk notes](#tdd-talk)
 
 ## Git <a name="git"></a>
 
@@ -36,7 +38,32 @@ git remote prune origin
 ```
 ht: [Why do I see a deleted remote branch?](https://stackoverflow.com/questions/17128466/why-do-i-see-a-deleted-remote-branch)
 
+[back](#contents)
 
+## Shell <a name="shell"/>
+### Symbolic links <a name="symlinks"/>
+Get the value of a symbolic link:
+```
+readlink <filename>
+```
+Create a symbolic link:
+```
+ln -s <srcfile> <dest>
+```
+[back](#contents)
+### Command substitution <a name="cmd-sub"/>
+Command substitution (run a command in a subshell and return the value within a
+command):
+```
+$(UNIX_COMMAND)
+`UNIX_COMMAND`
+```
+For example, here is a way to show all the machine-local users:
+```
+ls $(dirname ~) 
+ls `dirname ~`
+```
+[back](#contents)
 ### Better zsh history <a name="zsh-history"></a>
 ```
 # In ~/.zshrc
@@ -46,9 +73,7 @@ setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
 setopt EXTENDED_HISTORY
 ```
-
 Then you can see your history like this:
-
 ```
 $ history -E -10
   474  4.12.2019 00:08  unsetopt | grep extended
@@ -62,7 +87,6 @@ $ history -E -10
   482  4.12.2019 00:11  man history
   483  4.12.2019 00:12  history -10
 ```
-
 This is useful for cutting down on the noise of duplicate commands:
 ```
 # In ~/.zshrc
@@ -72,7 +96,6 @@ setopt HIST_FIND_NO_DUPS
 More here: [Better zsh history](https://www.soberkoder.com/better-zsh-history/)
 
 [back](#contents)
-
 ## Excluding multiple directories with recursive grep <a name="grep-multi-exclude"></a>
 
 ```
@@ -80,36 +103,18 @@ grep -r --exclude-dir={dir1,dir2,...,dirn} EXPR DIR
 ```
 [back](#contents)
 
+## Mac OS <a name="macos">
 ## Showing hidden files in Mac OS Finder dialog <a name="hidden-finder"></a>
 ```
 Command-Shift-.
 ```
 [back](#contents)
 
-## TDD notes
+## TDD notes <a name="tdd"/>
 
-[Some notes I prepared for a collaborative tech talk on TDD](/tdd)
+[Some notes I prepared for a collaborative tech talk on TDD](/tdd) <a name="tdd-talk">
 
-## Shell commands (bash, zsh) 
-Get the value of a symbolic link:
-```
-readlink <filename>
-```
-Create a symbolic link:
-```
-ln -s <srcfile> <dest>
-```
-Command substitution (run a command in a subshell and return the value within a
-command):
-```
-$(UNIX_COMMAND)
-`UNIX_COMMAND`
-```
-For example, here is a way to show all the machine-local users:
-```
-ls $(dirname ~) 
-ls `dirname ~`
-```
+[back](#contents)
 
 ## Formatting JSON in Vim
 Install [jq](https://stedolan.github.io/jq/):
