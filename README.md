@@ -12,13 +12,16 @@ phrase 'duck it' for searching on DuckDuckGo.)
 
 [Git](#git)
 - [Pruning deleted remote branches](#git-remote-prune)
+
 [Shell](#shell)
 - [Symlinks](#symlinks)
 - [Command substitution](#cmd-sub)
 - [Better zsh history](#zsh-history)
 - [Excluding multiple directories with recursive grep](#grep-multi-exclude)
+
 [Mac OS](#macos)
 - [Showing hidden files in Finder](#hidden-finder)
+
 [TDD](#tdd)
 - [TDD talk notes](#tdd-talk)
 
