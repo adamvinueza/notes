@@ -8,17 +8,21 @@ of it as my auxiliary long-term memory.
 (UPDATE: [This strongly suggests](https://imgur.com/a/n24kl) I should use the
 phrase 'duck it' for searching on DuckDuckGo.)
 
-## I keep forgetting I am on a different branch, so ...
+## Contents <a name="contents">
 
-Calling it `git-master-pull` and sticking it in `~/bin`:
+[Git](#git)
+- [Pruning deleted remote branches](#git-remote-prune)
 
-```
-#!/bin/bash
-git checkout master && git pull
-```
+Shell
+- [Better zsh history](#zsh-history)
+- [Excluding multiple directories with recursive grep](#grep-multi-exclude)
 
-## Pruning deleted remote branches from my local repository
+Mac OS
+- [Showing hidden files in Finder](#hidden-finder)
 
+## Git <a name="git"></a>
+
+### Pruning deleted remote branches from my local copy <a name="git-remote-prune"></a>
 Find out what you can prune like this:
 
 ```
@@ -33,12 +37,7 @@ git remote prune origin
 ht: [Why do I see a deleted remote branch?](https://stackoverflow.com/questions/17128466/why-do-i-see-a-deleted-remote-branch)
 
 
-## Using zsh
-
-It's the new default shell in Mac OS.
-
-#### Better zsh history
-
+### Better zsh history <a name="zsh-history"></a>
 ```
 # In ~/.zshrc
 export HISTFILESIZE=1000000000
@@ -72,17 +71,20 @@ setopt HIST_FIND_NO_DUPS
 
 More here: [Better zsh history](https://www.soberkoder.com/better-zsh-history/)
 
-## Excluding multiple directories with recursive grep
+[back](#contents)
+
+## Excluding multiple directories with recursive grep <a name="grep-multi-exclude"></a>
 
 ```
 grep -r --exclude-dir={dir1,dir2,...,dirn} EXPR DIR
 ```
+[back](#contents)
 
-## Showing hidden files in Mac OS Finder dialog
-
+## Showing hidden files in Mac OS Finder dialog <a name="hidden-finder"></a>
 ```
 Command-Shift-.
 ```
+[back](#contents)
 
 ## TDD notes
 
