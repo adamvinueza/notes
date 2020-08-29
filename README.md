@@ -8,13 +8,22 @@ of it as my auxiliary long-term memory.
 (UPDATE: [This strongly suggests](https://imgur.com/a/n24kl) I should use the
 phrase 'duck it' for searching on DuckDuckGo.)
 
+## Contents
+[Git](#git)
+- A script to ensure your local master is up to date 
+
+
+### Git <a name="git">
 ## I keep forgetting I am on a different branch, so ...
 
-Calling it `git-master-pull` and sticking it in `~/bin`:
+Calling it `gpull` and sticking it in `~/bin`:
 
 ```
-#!/bin/bash
+#!/bin/zsh
+
+curr=`git rev-parse --abbrev-ref HEAD -- | head -1`
 git checkout master && git pull
+git checkout $curr
 ```
 
 ## Pruning deleted remote branches from my local repository
