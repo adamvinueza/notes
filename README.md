@@ -34,7 +34,7 @@ phrase 'duck it' for searching on DuckDuckGo.)
 
 ## <a name="git">Git</a>
 
-### <a name="git-remote-prune"/a>Pruning deleted remote branches from my local copy
+### <a name="git-remote-prune">Pruning deleted remote branches from my local copy</a>
 Find out what you can prune like this:
 
 ```
