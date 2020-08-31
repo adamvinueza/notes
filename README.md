@@ -50,7 +50,7 @@ ht: [Why do I see a deleted remote branch?](https://stackoverflow.com/questions/
 
 [back](#contents)
 
-### <a name="gh-repo-cli"/>Creating a Github repository from the command line
+### <a name="gh-repo-cli">Creating a Github repository from the command line</a>
 First, create a git repository in the usual way:
 ```
 mkdir my-new-repo
@@ -74,20 +74,21 @@ git push -u origin master
 ```
 [back](#contents)
 
-### Because I always forget reverting in Git <a name="git-revert"/>
+### <a name="git-revert">Because I always forget reverting in Git</a>
 
 [How to undo almost anything with Git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
 
 [back](#contents)
 
-### Resolving 95% of Git conflicts <a name="git-conflicts"/>
+### <a name="git-conflicts">Resolving 95% of Git conflicts</a>
 
 [Quickest Way to Resolve Most Git Conflicts](https://easyengine.io/tutorials/git/git-resolve-merge-conflicts/)
 
 [back](#contents)
 
-## Shell <a name="shell"/>
-### Symbolic links <a name="symlinks"/>
+## <a name="shell">Shell</a>
+
+### <a name="symlinks">Symbolic links</a>
 Get the value of a symbolic link:
 ```
 readlink <filename>
@@ -97,7 +98,8 @@ Create a symbolic link:
 ln -s <srcfile> <dest>
 ```
 [back](#contents)
-### Command substitution <a name="cmd-sub"/>
+
+### <a name="cmd-sub">Command substitution</a>
 Command substitution (run a command in a subshell and return the value within a
 command):
 ```
@@ -110,7 +112,8 @@ ls $(dirname ~)
 ls `dirname ~`
 ```
 [back](#contents)
-### Better zsh history <a name="zsh-history"/a>
+
+### <a name="zsh-history">Better zsh history</a>
 ```
 # In ~/.zshrc
 export HISTFILESIZE=1000000000
@@ -142,29 +145,29 @@ setopt HIST_FIND_NO_DUPS
 More here: [Better zsh history](https://www.soberkoder.com/better-zsh-history/)
 
 [back](#contents)
-## Excluding multiple directories with recursive grep <a name="grep-multi-exclude"/a>
+## <a name="grep-multi-exclude">Excluding multiple directories with recursive grep</a>
 
 ```
 grep -r --exclude-dir={dir1,dir2,...,dirn} EXPR DIR
 ```
 [back](#contents)
 
-## Mac OS <a name="macos">
-## Showing hidden files in Mac OS Finder dialog <a name="hidden-finder"/a>
+## <a name="macos">Mac OS</a>
+### <a name="hidden-finder">Showing hidden files in Mac OS Finder dialog</a>
 ```
 Command-Shift-.
 ```
 [back](#contents)
 
-## TDD notes <a name="tdd"/>
+## <a name="tdd">TDD notes</a>
 
-[Some notes I prepared for a collaborative tech talk on TDD](/tdd) <a name="tdd-talk">
+<a name="tdd-talk">[Some notes I prepared for a collaborative tech talk on TDD](/tdd)</a>
 
 [back](#contents)
 
 ## Vim <a name="vim"/>
 
-### Formatting JSON in Vim <a name="vim-json"/>
+### <a name="vim-json">Formatting JSON in Vim</a>
 Install [jq](https://stedolan.github.io/jq/):
 
 ```
@@ -177,9 +180,9 @@ Inside vim:
 :%!jq .
 ```
 
-## Golang Resources <a name="golang"/>
+## <a name="golang">Golang Resources</a>
 
-### Installing Go with Homebrew <a name="go-install"/>
+### <a name="go-install">Installing Go with Homebrew</a>
 The latest version is 1.14.
 
 You can remove earlier versions of go by removing `usr/local/bin/go`. If it is
