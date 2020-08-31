@@ -8,17 +8,36 @@ of it as my auxiliary long-term memory.
 (UPDATE: [This strongly suggests](https://imgur.com/a/n24kl) I should use the
 phrase 'duck it' for searching on DuckDuckGo.)
 
-## I keep forgetting I am on a different branch, so ...
+## <a name="contents">Contents</a>
 
-Calling it `git-master-pull` and sticking it in `~/bin`:
+[Git](#git-stuff)
+- [Pruning deleted remote branches](#git-remote-prune)
+- [Creating a Github repository from the command line](#gh-repo-cli)
+- [Because I always forget reverting in Git](#git-revert)
+- [Resolving 95% of Git conflicts](#git-conflicts)
 
-```
-#!/bin/bash
-git checkout master && git pull
-```
+[Shell](#shell)
+- [Symlinks](#symlinks)
+- [Command substitution](#cmd-sub)
+- [Better zsh history](#zsh-history)
+- [Excluding multiple directories with recursive grep](#grep-multi-exclude)
 
-## Pruning deleted remote branches from my local repository
+[Vim](#vim)
+- [Formatting JSON in Vim](#vim-json)
 
+[Mac OS](#macos)
+- [Showing hidden files in Finder](#hidden-finder)
+
+[TDD](#tdd)
+- [TDD talk notes](#tdd-talk)
+
+[Golang Resources](#golang)
+- [Installing Go with Homebrew](#go-install)
+
+
+## <a name="git">Git</a>
+
+### <a name="git-remote-prune">Pruning deleted remote branches from my local copy</a>
 Find out what you can prune like this:
 
 ```
@@ -32,13 +51,72 @@ git remote prune origin
 ```
 ht: [Why do I see a deleted remote branch?](https://stackoverflow.com/questions/17128466/why-do-i-see-a-deleted-remote-branch)
 
+[back](#contents)
 
-## Using zsh
+### <a name="gh-repo-cli">Creating a Github repository from the command line</a>
+First, create a git repository in the usual way:
+```
+mkdir my-new-repo
+cd my-new-repo
+git init
+echo '#My New Repository\nLorem ipsum.' > README.md
+git add README.md
+git commit -m 'Initial commit'
+git remote add origin git@github.com:$(git config user.name)/my-new-repo.git
+```
+Then you'll need to create the repository on Github. To do this, you'll need to
+create a [Github personal access token](https://github.com/settings/tokens).
+It's simplest to copy it into the shell variable `GITHUB_ACCESS_TOKEN`. Then you
+run this Github API command:
+```
+curl -u $(git config user.name):$GITHUB_ACCESS_TOKEN https://api.github.com/user/repos -d '{"name":"my-new-repo"}'
+```
+Finally, push the repository changes to your new remote repository:
+```
+git push -u origin master
+```
+[back](#contents)
 
-It's the new default shell in Mac OS.
+### <a name="git-revert">Because I always forget reverting in Git</a>
 
-#### Better zsh history
+[How to undo almost anything with Git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
 
+[back](#contents)
+
+### <a name="git-conflicts">Resolving 95% of Git conflicts</a>
+
+[Quickest Way to Resolve Most Git Conflicts](https://easyengine.io/tutorials/git/git-resolve-merge-conflicts/)
+
+[back](#contents)
+
+## <a name="shell">Shell</a>
+
+### <a name="symlinks">Symbolic links</a>
+Get the value of a symbolic link:
+```
+readlink <filename>
+```
+Create a symbolic link:
+```
+ln -s <srcfile> <dest>
+```
+[back](#contents)
+
+### <a name="cmd-sub">Command substitution</a>
+Command substitution (run a command in a subshell and return the value within a
+command):
+```
+$(UNIX_COMMAND)
+`UNIX_COMMAND`
+```
+For example, here is a way to show all the machine-local users:
+```
+ls $(dirname ~) 
+ls `dirname ~`
+```
+[back](#contents)
+
+### <a name="zsh-history">Better zsh history</a>
 ```
 # In ~/.zshrc
 export HISTFILESIZE=1000000000
@@ -47,9 +125,7 @@ setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
 setopt EXTENDED_HISTORY
 ```
-
 Then you can see your history like this:
-
 ```
 $ history -E -10
   474  4.12.2019 00:08  unsetopt | grep extended
@@ -63,7 +139,6 @@ $ history -E -10
   482  4.12.2019 00:11  man history
   483  4.12.2019 00:12  history -10
 ```
-
 This is useful for cutting down on the noise of duplicate commands:
 ```
 # In ~/.zshrc
@@ -72,44 +147,30 @@ setopt HIST_FIND_NO_DUPS
 
 More here: [Better zsh history](https://www.soberkoder.com/better-zsh-history/)
 
-## Excluding multiple directories with recursive grep
+[back](#contents)
+### <a name="grep-multi-exclude">Excluding multiple directories with recursive grep</a>
 
 ```
 grep -r --exclude-dir={dir1,dir2,...,dirn} EXPR DIR
 ```
+[back](#contents)
 
-## Showing hidden files in Mac OS Finder dialog
-
+## <a name="macos">Mac OS</a>
+### <a name="hidden-finder">Showing hidden files in Mac OS Finder dialog</a>
 ```
 Command-Shift-.
 ```
+[back](#contents)
 
-## TDD notes
+## <a name="tdd">TDD</a>
+### <a name="tdd">TDD talk notes</a>
+<a name="tdd-talk">[Some notes I prepared for a collaborative tech talk on TDD](/tdd)</a>
 
-[Some notes I prepared for a collaborative tech talk on TDD](/tdd)
+[back](#contents)
 
-## Shell commands (bash, zsh) 
-Get the value of a symbolic link:
-```
-readlink <filename>
-```
-Create a symbolic link:
-```
-ln -s <srcfile> <dest>
-```
-Command substitution (run a command in a subshell and return the value within a
-command):
-```
-$(UNIX_COMMAND)
-`UNIX_COMMAND`
-```
-For example, here is a way to show all the machine-local users:
-```
-ls $(dirname ~) 
-ls `dirname ~`
-```
+## Vim <a name="vim"/>
 
-## Formatting JSON in Vim
+### <a name="vim-json">Formatting JSON in Vim</a>
 Install [jq](https://stedolan.github.io/jq/):
 
 ```
@@ -122,7 +183,9 @@ Inside vim:
 :%!jq .
 ```
 
-## Installing Go with Homebrew
+## <a name="golang">Golang Resources</a>
+
+### <a name="go-install">Installing Go with Homebrew</a>
 The latest version is 1.14.
 
 You can remove earlier versions of go by removing `usr/local/bin/go`. If it is
@@ -147,35 +210,6 @@ brew go get golint
 Brew puts Go tools into `/usr/local/Cellar/go/$GOVERSION$/bin`, so you can just
 run `go get -u golang.org/x/lint/golint`, move the file from `$HOME/go/bin` to
 the above directory, and create a symbolic link.
-
-## Creating a Github repository from the command line
-First, create a git repository in the usual way:
-```
-mkdir my-new-repo
-cd my-new-repo
-git init
-echo '#My New Repository\nLorem ipsum.' > README.md
-git add README.md
-git commit -m 'Initial commit'
-git remote add origin git@github.com:$(git config user.name)/my-new-repo.git
-```
-Then you'll need to create the repository on Github. To do this, you'll need to
-create a [Github personal access token](https://github.com/settings/tokens).
-It's simplest to copy it into the shell variable `GITHUB_ACCESS_TOKEN`. Then you
-run this Github API command:
-```
-curl -u $(git config user.name):$GITHUB_ACCESS_TOKEN https://api.github.com/user/repos -d '{"name":"my-new-repo"}'
-```
-Finally, push the repository changes to your new remote repository:
-```
-git push -u origin master
-```
-## Because I always forget reverting in Git
-[How to undo almost anything with Git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
-
-## Resolving 95% of Git conflicts
-
-[Quickest Way to Resolve Most Git Conflicts](https://easyengine.io/tutorials/git/git-resolve-merge-conflicts/)
 
 ## Visual Studio Code
 
