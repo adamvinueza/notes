@@ -10,7 +10,7 @@ phrase 'duck it' for searching on DuckDuckGo.)
 
 ## Contents <a name="contents"/>
 
-[Git](#git)
+[Git](#git-stuff)
 - [Pruning deleted remote branches](#git-remote-prune)
 - [Creating a Github repository from the command line](#gh-repo-cli)
 - [Because I always forget reverting in Git](#git-revert)
@@ -32,7 +32,7 @@ phrase 'duck it' for searching on DuckDuckGo.)
 - [TDD talk notes](#tdd-talk)
 
 
-## Git <a name="git"/a>
+## Git <a name="git-stuff">
 
 ### Pruning deleted remote branches from my local copy <a name="git-remote-prune"/a>
 Find out what you can prune like this:
@@ -50,7 +50,7 @@ ht: [Why do I see a deleted remote branch?](https://stackoverflow.com/questions/
 
 [back](#contents)
 
-### Creating a Github repository from the command line <a name="gh-repo-cli"/>
+### <a name="gh-repo-cli"/>Creating a Github repository from the command line
 First, create a git repository in the usual way:
 ```
 mkdir my-new-repo
