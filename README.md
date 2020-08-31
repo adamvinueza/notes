@@ -31,6 +31,9 @@ phrase 'duck it' for searching on DuckDuckGo.)
 [TDD](#tdd)
 - [TDD talk notes](#tdd-talk)
 
+[Golang Resources](#golang)
+- [Installing Go with Homebrew](#go-install)
+
 
 ## <a name="git">Git</a>
 
