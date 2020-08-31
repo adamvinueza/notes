@@ -145,7 +145,7 @@ setopt HIST_FIND_NO_DUPS
 More here: [Better zsh history](https://www.soberkoder.com/better-zsh-history/)
 
 [back](#contents)
-## <a name="grep-multi-exclude">Excluding multiple directories with recursive grep</a>
+### <a name="grep-multi-exclude">Excluding multiple directories with recursive grep</a>
 
 ```
 grep -r --exclude-dir={dir1,dir2,...,dirn} EXPR DIR
