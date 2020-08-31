@@ -8,7 +8,7 @@ of it as my auxiliary long-term memory.
 (UPDATE: [This strongly suggests](https://imgur.com/a/n24kl) I should use the
 phrase 'duck it' for searching on DuckDuckGo.)
 
-## Contents <a name="contents">
+## Contents <a name="contents"/>
 
 [Git](#git)
 - [Pruning deleted remote branches](#git-remote-prune)
@@ -30,6 +30,7 @@ phrase 'duck it' for searching on DuckDuckGo.)
 
 [TDD](#tdd)
 - [TDD talk notes](#tdd-talk)
+
 
 ## Git <a name="git"/a>
 
