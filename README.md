@@ -8,7 +8,7 @@ of it as my auxiliary long-term memory.
 (UPDATE: [This strongly suggests](https://imgur.com/a/n24kl) I should use the
 phrase 'duck it' for searching on DuckDuckGo.)
 
-## Contents <a name="contents"/>
+## <a name="contents">Contents</a>
 
 [Git](#git-stuff)
 - [Pruning deleted remote branches](#git-remote-prune)
@@ -159,8 +159,8 @@ Command-Shift-.
 ```
 [back](#contents)
 
-## <a name="tdd">TDD notes</a>
-
+## <a name="tdd">TDD</a>
+### <a name="tdd">TDD talk notes</a>
 <a name="tdd-talk">[Some notes I prepared for a collaborative tech talk on TDD](/tdd)</a>
 
 [back](#contents)
