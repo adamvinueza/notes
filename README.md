@@ -12,12 +12,18 @@ phrase 'duck it' for searching on DuckDuckGo.)
 
 [Git](#git)
 - [Pruning deleted remote branches](#git-remote-prune)
+- [Creating a Github repository from the command line](#gh-repo-cli)
+- [Because I always forget reverting in Git](#git-revert)
+- [Resolving 95% of Git conflicts](#git-conflicts)
 
 [Shell](#shell)
 - [Symlinks](#symlinks)
 - [Command substitution](#cmd-sub)
 - [Better zsh history](#zsh-history)
 - [Excluding multiple directories with recursive grep](#grep-multi-exclude)
+
+[Vim](#vim)
+- [Formatting JSON in Vim](#vim-json)
 
 [Mac OS](#macos)
 - [Showing hidden files in Finder](#hidden-finder)
@@ -40,6 +46,42 @@ Then prune like this:
 git remote prune origin
 ```
 ht: [Why do I see a deleted remote branch?](https://stackoverflow.com/questions/17128466/why-do-i-see-a-deleted-remote-branch)
+
+[back](#contents)
+
+### Creating a Github repository from the command line <a name="gh-repo-cli"/>
+First, create a git repository in the usual way:
+```
+mkdir my-new-repo
+cd my-new-repo
+git init
+echo '#My New Repository\nLorem ipsum.' > README.md
+git add README.md
+git commit -m 'Initial commit'
+git remote add origin git@github.com:$(git config user.name)/my-new-repo.git
+```
+Then you'll need to create the repository on Github. To do this, you'll need to
+create a [Github personal access token](https://github.com/settings/tokens).
+It's simplest to copy it into the shell variable `GITHUB_ACCESS_TOKEN`. Then you
+run this Github API command:
+```
+curl -u $(git config user.name):$GITHUB_ACCESS_TOKEN https://api.github.com/user/repos -d '{"name":"my-new-repo"}'
+```
+Finally, push the repository changes to your new remote repository:
+```
+git push -u origin master
+```
+[back](#contents)
+
+### Because I always forget reverting in Git <a name="git-revert"/>
+
+[How to undo almost anything with Git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
+
+[back](#contents)
+
+### Resolving 95% of Git conflicts <a name="git-conflicts"/>
+
+[Quickest Way to Resolve Most Git Conflicts](https://easyengine.io/tutorials/git/git-resolve-merge-conflicts/)
 
 [back](#contents)
 
@@ -119,7 +161,9 @@ Command-Shift-.
 
 [back](#contents)
 
-## Formatting JSON in Vim
+## Vim <a name="vim"/>
+
+### Formatting JSON in Vim <a name="vim-json"/>
 Install [jq](https://stedolan.github.io/jq/):
 
 ```
@@ -132,7 +176,9 @@ Inside vim:
 :%!jq .
 ```
 
-## Installing Go with Homebrew
+## Golang Resources <a name="golang"/>
+
+### Installing Go with Homebrew <a name="go-install"/>
 The latest version is 1.14.
 
 You can remove earlier versions of go by removing `usr/local/bin/go`. If it is
@@ -157,35 +203,6 @@ brew go get golint
 Brew puts Go tools into `/usr/local/Cellar/go/$GOVERSION$/bin`, so you can just
 run `go get -u golang.org/x/lint/golint`, move the file from `$HOME/go/bin` to
 the above directory, and create a symbolic link.
-
-## Creating a Github repository from the command line
-First, create a git repository in the usual way:
-```
-mkdir my-new-repo
-cd my-new-repo
-git init
-echo '#My New Repository\nLorem ipsum.' > README.md
-git add README.md
-git commit -m 'Initial commit'
-git remote add origin git@github.com:$(git config user.name)/my-new-repo.git
-```
-Then you'll need to create the repository on Github. To do this, you'll need to
-create a [Github personal access token](https://github.com/settings/tokens).
-It's simplest to copy it into the shell variable `GITHUB_ACCESS_TOKEN`. Then you
-run this Github API command:
-```
-curl -u $(git config user.name):$GITHUB_ACCESS_TOKEN https://api.github.com/user/repos -d '{"name":"my-new-repo"}'
-```
-Finally, push the repository changes to your new remote repository:
-```
-git push -u origin master
-```
-## Because I always forget reverting in Git
-[How to undo almost anything with Git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
-
-## Resolving 95% of Git conflicts
-
-[Quickest Way to Resolve Most Git Conflicts](https://easyengine.io/tutorials/git/git-resolve-merge-conflicts/)
 
 ## Visual Studio Code
 
