@@ -32,9 +32,9 @@ phrase 'duck it' for searching on DuckDuckGo.)
 - [TDD talk notes](#tdd-talk)
 
 
-## Git <a name="git-stuff">
+## <a name="git">Git</a>
 
-### Pruning deleted remote branches from my local copy <a name="git-remote-prune"/a>
+### <a name="git-remote-prune"/a>Pruning deleted remote branches from my local copy
 Find out what you can prune like this:
 
 ```
