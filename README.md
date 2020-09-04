@@ -81,6 +81,25 @@ git push -u origin master
 
 [How to undo almost anything with Git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
 
+#### Reverting a merge commit
+If you run `git log -n 1` in your repository, you should see the last commit:
+```
+commit 76aeb7a3054cafca4af6652edb9bcdfb3bd31e9d (HEAD -> bar, origin/bar)
+Merge: 7e3b24e 2e855bc
+Author: Me <me@somewhere.com>
+Date:   Fri Sep 4 10:20:55 2020 -0600
+
+    Merge branch 'foo' into bar
+```
+The commit hash is the one you want to revert (it's the value of HEAD). The next
+two commits are the parents of that commit: the first is the immediate parent.
+
+To revert to the commit immediately previous to the merge, use this command:
+```
+git revert 76aeb7a -m 1
+```
+And to revert to the one before that, use `-m 2` instead of `-m 1`.
+
 [back](#contents)
 
 ### <a name="git-conflicts">Resolving 95% of Git conflicts</a>
