@@ -174,6 +174,18 @@ grep -r --exclude-dir={dir1,dir2,...,dirn} EXPR DIR
 ```
 [back](#contents)
 
+### <a name="debug-terminal">Debugging a script with set</a>
+TIL you can spit all the script's commands to `stdout` using `set`:
+```
+set -x
+```
+This will do the thing. To disable it:
+```
+set +x
+```
+More [here](https://stackoverflow.com/questions/36273665/what-does-set-x-do).
+[back](#contents)
+
 ## <a name="macos">Mac OS</a>
 ### <a name="hidden-finder">Showing hidden files in Mac OS Finder dialog</a>
 ```
