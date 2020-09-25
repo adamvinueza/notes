@@ -397,4 +397,4 @@ directory, it will think that _that_ directory is where to look for modules, not
 the lower-level one (which is where the modules actually are). That's what I
 did, and it took forever for me to figure out how to fix it.
 
-DON'T PUT __init__.py WHERE IT DOESN'T BELONG.
+DON'T PUT \_\_init\_\_.py WHERE IT DOESN'T BELONG.
