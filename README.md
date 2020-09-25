@@ -31,6 +31,10 @@ phrase 'duck it' for searching on DuckDuckGo.)
 [TDD](#tdd)
 - [TDD talk notes](#tdd-talk)
 
+[Python](#python)
+
+- [Pytest, imports, and __init__.py](#pytest)
+
 [Golang Resources](#golang)
 - [Installing Go with Homebrew](#go-install)
 
@@ -346,9 +350,9 @@ go clean -testcache
 
 [AWS SAM in a Docker Container](https://medium.com/monsoon-engineering/running-aws-sam-in-a-docker-container-2491596672c2)
 
-## Python
+## <a name="python">Python</a>
 
-### Creating a minimal Python package
+### <a name="minimal-pkg">Creating a minimal Python package</a>
 [Scott Torborg](https://www.scotttorborg.com/) has a nice tutorial on
 [creating a minimal Python
 package](https://python-packaging.readthedocs.io/en/latest/) that can be used
@@ -372,3 +376,25 @@ version Major.minor.patch).
 
 When you've done all that, running `pip install -r requirements.txt` will
 download the repository and run its `setup.py` script.
+
+### <a name="pytest">Pytest, imports, and __init__.py</a>
+A standard Python library package structure looks like this:
+```
+root/
+|- foo/
+   |- README.md
+   |- setup.py
+   |- foo/
+      |- __init__.py
+      |- foo.py
+   |- tests/
+      |- __init__.py
+      |- test_foo.py
+```
+If you run `pytest` from `root`, it will have no problem finding the tests. But
+if you inadvertently put an `__init__.py` file into the top-level `foo`
+directory, it will think that _that_ directory is where to look for modules, not
+the lower-level one (which is where the modules actually are). That's what I
+did, and it took forever for me to figure out how to fix it.
+
+DON'T PUT __init__.py WHERE IT DOESN'T BELONG.
