@@ -104,6 +104,12 @@ git revert 76aeb7a -m 1
 ```
 And to revert to the one before that, use `-m 2` instead of `-m 1`.
 
+[Jaana Dogan](https://twitter.com/rakyll/) has [this alias](https://twitter.com/rakyll/status/1311479159936311299), which I put into my
+.zshrc:
+```
+alias undo='git reset HEAD~'
+```
+
 [back](#contents)
 
 ### <a name="git-conflicts">Resolving 95% of Git conflicts</a>
