@@ -407,3 +407,5 @@ DON'T PUT \_\_init\_\_.py WHERE IT DOESN'T BELONG.
 
 The ideas here were drawn from pytest documentation of
 [its import mechanisms](https://docs.pytest.org/en/stable/pythonpath.html).
+
+[back](#contents)
