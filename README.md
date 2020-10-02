@@ -404,3 +404,6 @@ the lower-level one (which is where the modules actually are). That's what I
 did, and it took forever for me to figure out how to fix it.
 
 DON'T PUT \_\_init\_\_.py WHERE IT DOESN'T BELONG.
+
+The ideas here were drawn from pytest documentation of
+[its import mechanisms](https://docs.pytest.org/en/stable/pythonpath.html).
